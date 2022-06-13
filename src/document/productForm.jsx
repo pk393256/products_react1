@@ -11,13 +11,22 @@ function ProductForm() {
     });
     const handlechange=(e)=>{
         const {name,value}=e.target;
-        console.log(name,'-',value)
+        // console.log(name,'-',value)
         setData({...data,[name]:value})
     }
-    // console.log(data)
     const Submit=()=>{
-
+        fetch('http://localhost:3001/products',{
+            method: 'POST',
+            body: JSON.stringify({
+                id, title, gender, price, category, image
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
     }
+    // console.log(data)
+    
     const { id, title, gender, price, category, image } = data;
 
     return (
