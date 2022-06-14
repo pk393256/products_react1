@@ -6,8 +6,11 @@ function ProductListing() {
     const [page,setPage]=React.useState(1)
     const [sortButtonClicked,setSortButtonClicked]=React.useState(false)
     const [filterButton,setFilterButton]=React.useState('')
+    const [loading,setLoading]=React.useState(false);
+    const [someError,setSomeError]=React.useState(false);
     // let page=1;
     function getData(){
+        setLoading(true)
         let sort='';
         let filter='';
         
@@ -18,13 +21,14 @@ function ProductListing() {
         .then((res)=>res.json())
         .then((res)=>{
             setData(res)
+            setLoading(false)
+            setSomeError(true)
             // console.log(a)
         }).catch((err)=>{
             console.log(err)
+            setSomeError(true)
+            setLoading(false)
         })
-    }
-    const Sort=()=>{
-
     }
     const prev=()=>{
         setPage(page-1)
@@ -47,8 +51,10 @@ function ProductListing() {
         })
         getData()
     }
-
-    return (
+    if(someError==true){
+        return <h1>Something went wrong...</h1>
+    }
+    return loading? <h1>Loading....</h1> :(
         <>
         <br />
         <br />
