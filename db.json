@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Bloodworth",
-      "gender": "female",
+      "gender": "male",
       "price": 3978,
       "category": "saree",
       "image": "https://picsum.photos/200"
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "Tomik",
-      "gender": "female",
+      "gender": "male",
       "price": 2198,
       "category": "jacket",
       "image": "https://picsum.photos/200"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "title": "Edgerley",
-      "gender": "female",
+      "gender": "male",
       "price": 4286,
       "category": "shirt",
       "image": "https://picsum.photos/200"
@@ -62,14 +62,6 @@
       "gender": "male",
       "price": 4727,
       "category": "salwar",
-      "image": "https://picsum.photos/200"
-    },
-    {
-      "id": 9,
-      "title": "Ivons",
-      "gender": "male",
-      "price": 1243,
-      "category": "trouser",
       "image": "https://picsum.photos/200"
     },
     {
